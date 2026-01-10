@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client'
 import './index.css';
 
 
-//sample data
+//data
 const burgerData = [
   {
     name: "Jalapeño Burger",
