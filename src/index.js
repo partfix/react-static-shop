@@ -93,7 +93,7 @@ function Menu() {
       {/* conditional rendering (ternary) */}
       {countBurgers ? (
 
-        <> {/*this is react fragment it will help us return mutliple html tag without putting it in unccessary div*/}
+        <>
           <p >
             Burgers so good, even John can't believe he made this. Grab one before he eats them all LOL!
           </p>
