@@ -27,7 +27,7 @@ const burgerData = [
     currency: "₱",
     price: 250,
     photoName: "burgers/baconBurger.jpg",
-    soldOut: false,
+    soldOut: true,
   },
   {
     name: "Mushroom Burger",
@@ -109,22 +109,23 @@ function Menu() {
   )
 }
 
+
+
 function Burger({ dataObj }) { // destructure here
 
   // if (props.dataObj.soldOut) return (<p>Sold Out!</p>)   - multiple return conditional rendering
 
   const active = { color: 'orangered', fontWeight: '500' }
   const soldOut = { color: '888' }
-  const priceStyle = { fontWeight: '400' }
 
   return (
-    <li className={`pizza ${dataObj.soldOut ? 'sold-out' : ''}`}>
+    <li className={`pizza ${dataObj.soldOut ? "sold-out" : ""}`}>
       <img src={dataObj.photoName} alt={dataObj.name} ></img>
 
       <div>
         <h3 style={dataObj.soldOut ? soldOut : active}>{dataObj.name}</h3>
         <p>{dataObj.ingredients}</p>
-        <span style={priceStyle}>{dataObj.currency} {dataObj.price}</span>
+        <span>{dataObj.soldOut ? "SOLD OUT" : <>{dataObj.currency} {dataObj.price}</>}</span>
       </div>
 
     </li>
@@ -132,7 +133,9 @@ function Burger({ dataObj }) { // destructure here
 }
 
 function NullMessage() {
-  return (<p> We are cooking the best burger at the moment, We will be right back!</p >)
+  return (
+    <p> We are cooking the best burger at the moment, We will be right back!</p >
+  )
 }
 
 function Footer() {
