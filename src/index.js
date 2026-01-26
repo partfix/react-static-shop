@@ -143,7 +143,7 @@ function Footer() {
   const openHour = 12                                    // open at 12 pm
   const closeHour = 22                                   // close at 10 pm
   const isOpen = hour >= openHour && hour <= closeHour   // greater 12 less than 22(11pm ) greater > 13(1), 14(2), 15(3), 16(4), 17(5), 18(6), 19(7), 20(8), 21(9), 22(10) < less 23 false 
-  //later on we can use this variables as properties or 'props'
+  //we can use it by passing it as a properties.
 
   return (
     <footer className='footer'>
