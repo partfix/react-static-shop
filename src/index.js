@@ -111,7 +111,7 @@ function Menu() {
 
 
 
-function Burger({ dataObj }) { // destructure here
+function Burger({ dataObj }) {
 
   // if (props.dataObj.soldOut) return (<p>Sold Out!</p>)   - multiple return conditional rendering
 
