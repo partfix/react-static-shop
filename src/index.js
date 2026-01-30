@@ -148,7 +148,7 @@ function Footer() {
   return (
     <footer className='footer'>
       {isOpen ? (
-        <OpenShop closeHour={closeHour} openHour={openHour} /> //instead using props we can destructure it directly
+        <OpenShop closeHour={closeHour} openHour={openHour} /> //we can destructure it directly
       ) :
         <CloseShop openHour={openHour} closeHour={closeHour} />
       }
@@ -186,3 +186,4 @@ function CoWrite() {
 //render to show on page.
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<React.StrictMode><App /></React.StrictMode>);
+
